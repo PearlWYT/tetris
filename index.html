@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	html,body,#app{
+		width: 100%;height: 100%;overflow: hidden;
+	}
+		#app{
+			background: url(./res/bg.jpg) 0 0/100% 100% no-repeat;
+			position: relative;
+		}
+		h3{
+			color: #fff;font-weight: normal;
+		}
+		h3#score{
+			font-size: 30px;text-align: center;line-height: 30px;color: rgba(0,0,0,0.7);;
+		}
+		*{
+			margin: 0;padding: 0;border-collapse: collapse;-webkit-user-select:none; 
+		}
+		table{
+			margin: 140px auto;background: rgba(0,0,0,0.7);
+		}
+		table,tr,td{
+			border:1px solid #333;
+		}
+		td{
+			width: 14px;height: 14px;
+		}
+		.S{
+			background-image: -webkit-linear-gradient(top left , #da7a75 , #a93434);
+		}
+		.Z{
+			background-image: -webkit-linear-gradient(top left , #DCE775 , #388E3C);
+		}
+		.J{
+			background-image: -webkit-linear-gradient(top left , #feff00 , #8a9115);
+		}
+		.L{
+			background-image: -webkit-linear-gradient(top left , #00BCD4 , #00838F);
+		}
+		.O{
+			background-image: -webkit-linear-gradient(top left , #cdd4f5 , #207da7);
+		}
+		.T{
+			background-image: -webkit-linear-gradient(top left , #A1887F , #5D4037);
+		}
+		.I{
+			background-image: -webkit-linear-gradient(top left , #efadfb , #9c43b4);
+		}
+		.gameover{
+			width: 300px;height:130px;background: #fff;border:1px solid #333;
+			border-radius: 3px;position: absolute;
+			top: 30%;left: 50%;transform: translate(-50%,-50%);display: none;
+		}
+		.btnClose{
+			position: absolute;	bottom: 20px;right: 20px;
+		}
+	</style>
+</head>
+<body>
+	<audio src="res/click.mp3" id="click"></audio>
+	<audio src="res/gameover.mp3" id="gameover"></audio>
+	<audio src="res/rotate.mp3" id="rotate"></audio>
+	<audio src="res/remove.mp3" id="remove"></audio>
+	<audio src="res/moveDown.mp3" id="moveDown"></audio>
+	<audio src="res/bgaudio.mp3" autoplay loop></audio>
+	<div id="app">
+		<div class="gameover">
+			游戏结束
+			<button class="btnClose">关闭</button>
+		</div>
+		<h3 id="info"></h3>
+		<h3 id="score"></h3>
+	</div>
+	<script type="text/javascript" src="js/block_json.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/Game.js"></script>
+	<script type="text/javascript" src="js/Block.js"></script>
+	<script type="text/javascript" src="js/Map.js"></script>
+	<script type="text/javascript">
+		var game = new Game();
+	</script>
+</body>
+</html>
